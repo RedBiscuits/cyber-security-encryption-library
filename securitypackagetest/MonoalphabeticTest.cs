@@ -142,6 +142,7 @@ namespace SecurityPackageTest
             
             int count = Enumerable.Range(0, largePlain.Length)
                  .Count(i => largePlain[i] == plain[i]);
+           
             Assert.IsTrue(count * 100 / largePlain.Length > 70);
         }
 

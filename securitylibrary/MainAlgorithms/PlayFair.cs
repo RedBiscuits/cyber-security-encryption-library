@@ -8,55 +8,54 @@ namespace SecurityLibrary
 {
     public class PlayFair : ICryptographic_Technique<string, string>
     {
-        public string Decrypt(string cipherText, string key)
+        public string Decrypt(string ct, string k)
         {
-            char[,] Table = get_table(key);
-            cipherText = cipherText.ToLower();
+            char[,] t = get_table(k);
+            ct = ct.ToLower();
 
-            string plain = "";
+            string p = "";
 
-            for (int i = 0; i < cipherText.Length; i += 2)
+            for (int i = 0; i < ct.Length; i += 2)
             {
-                plain += inverse_search(cipherText[i], cipherText[i + 1], Table);
+                p += inverse_search(ct[i], ct[i + 1], t);
             }
 
-            Console.WriteLine(postprocesstext(plain));
-            return postprocesstext(plain);
+            return postprocesstext(p);
         }
 
-        public string Encrypt(string text, string key)
+        public string Encrypt(string text, string k)
         {
 
-            char[,] Table = get_table(key);
-            string newtext = process_text(text);
+            char[,] t = get_table(k);
+            string nt = process_text(text);
 
-            string cipher = "";
+            string c = "";
 
-            for (int i = 0; i < newtext.Length; i += 2)
+            for (int i = 0; i < nt.Length; i += 2)
             {
-                cipher += search(newtext[i], newtext[i + 1], Table);
+                c += search(nt[i], nt[i + 1], t);
             }
 
-            return cipher;
+            return c;
         }
 
 
         private char[,] get_table(string k)
         {
-            char[,] table = new char[5, 5];
+            char[,] t = new char[5, 5];
 
-            construct_data(table, new string((k + "abcdefghiklmnopqrstuvwxyz").Distinct().ToArray()));
+            construct_data(t, new string((k + "abcdefghiklmnopqrstuvwxyz").Distinct().ToArray()));
 
-            return table;
+            return t;
         }
 
-        private void construct_data(char[,] table, string all)
+        private void construct_data(char[,] t, string k)
         {
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    table[i, j] = all[(i * 5) + j];
+                    t[i, j] = k[(i * 5) + j];
                 }
             }
         }
@@ -90,7 +89,9 @@ namespace SecurityLibrary
             return get_answer(A, B, Table, indexArow, indexAcol, indexBrow, indexBcol);
         }
 
-        private void find_indeces(char A, char B, char[,] Table, out int indexArow, out int indexAcol, out int indexBrow, out int indexBcol)
+        private void find_indeces(char A, char B, char[,] Table, 
+            out int indexArow, out int indexAcol, 
+            out int indexBrow, out int indexBcol)
         {
             indexArow = indexAcol = indexBrow = indexBcol = -1;
 
@@ -112,7 +113,9 @@ namespace SecurityLibrary
             }
         }
 
-        private string get_answer(char A, char B, char[,] Table, int indexArow, int indexAcol, int indexBrow, int indexBcol)
+        private string get_answer(char A, char B, char[,] Table,
+            int indexArow, int indexAcol,
+            int indexBrow, int indexBcol)
         {
             string answer = "";
 
@@ -138,12 +141,15 @@ namespace SecurityLibrary
         private string inverse_search(char A, char B, char[,] Table)
         {
             int indexArow, indexAcol, indexBrow, indexBcol;
-            find_indeces(A, B, Table, out indexArow, out indexAcol, out indexBrow, out indexBcol);
+            find_indeces(A, B, Table, out indexArow, 
+                out indexAcol, out indexBrow, out indexBcol);
 
             return get_inverse(A, B, Table, indexArow, indexAcol, indexBrow, indexBcol);
         }
 
-        private string get_inverse(char A, char B, char[,] Table, int indexArow, int indexAcol, int indexBrow, int indexBcol)
+        private string get_inverse(char A, char B, char[,] Table,
+            int indexArow, int indexAcol,
+            int indexBrow, int indexBcol)
         {
             string answer = "";
 

@@ -26,12 +26,17 @@ namespace SecurityPackageTest
         string newKey = "RPMLDSAXICHKQUYEWOZGBFTVN".ToLower();
         string newCipher = "CAOSGHZQBQBSOS".ToUpper();
 
+        public TestContext TestContext { get; set; }
 
         [TestMethod]
         public void PlayfairTestEnc1()
         {
             PlayFair algorithm = new PlayFair();
             string cipher = algorithm.Encrypt(mainPlain, mainKey);
+            TestContext.WriteLine("Decrypted Plaintext: " + cipher);
+
+            // Print the ciphertext (mainCipher assumed to be available)
+            TestContext.WriteLine("Original Ciphertext: " + mainCipher);
             Assert.IsTrue(cipher.Equals(mainCipher, StringComparison.InvariantCultureIgnoreCase));
         }
 

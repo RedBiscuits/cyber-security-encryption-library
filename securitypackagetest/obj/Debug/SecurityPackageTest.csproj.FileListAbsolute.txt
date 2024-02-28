@@ -70,3 +70,12 @@ C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityPackageTest\b
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.AssemblyReference.cache
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CoreCompileInputs.cache
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb

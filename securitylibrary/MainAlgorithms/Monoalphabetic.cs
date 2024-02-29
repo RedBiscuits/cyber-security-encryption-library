@@ -10,26 +10,62 @@ namespace SecurityLibrary
     {
         public string Analyse(string plainText, string cipherText)
         {
-            throw new NotImplementedException();
-           
+            //throw new NotImplementedException();
+            bool[] FREQUENCY = new bool[26];
+            for (int i = 0; i < FREQUENCY.Length; i++) { 
+                 FREQUENCY[i] = false; }
+            string CipherToLow = cipherText.ToLower();
+            char[] PLTXTarr = plainText.ToCharArray();
+            char[] CIPHERTXTarr = CipherToLow.ToCharArray();
+            char[] KEYarr = new char[26];
+            for (int i = 0; i < plainText.Length; i++) {
+                KEYarr[PLTXTarr[i] - 97] = CIPHERTXTarr[i];
+                FREQUENCY[CIPHERTXTarr[i] - 97] = true; }
+            for (int i = 0; i < KEYarr.Length; i++) {
+                if (KEYarr[i] == '\0') {
+                    for (int j = 0; j < FREQUENCY.Length; j++) {
+                        if (!FREQUENCY[j]){
+                            KEYarr[i] = (char)(j + 97);
+                            FREQUENCY[j] = true;
+                            break; } } } }
+            return new string(KEYarr);
         }
 
         public string Decrypt(string cipherText, string key)
         {
-            throw new NotImplementedException();
-
+            //throw new NotImplementedException();
+            string CIPHERToLow = cipherText.ToLower();
+            char[] CIIPHERTXTarr = CIPHERToLow.ToCharArray();
+            char[] KEYarr = key.ToCharArray();
+            char[] PLTXTarr = new char[cipherText.Length];
+            char VAR = '0';
+            char OUT = 'a';
+            for (int i = 0; i < CIIPHERTXTarr.Length; i++) {
+                VAR = CIIPHERTXTarr[i];
+                int counter = 0;
+                for (int j = 0; j < key.Length; j++) {
+                    if (VAR == KEYarr[j])
+                        break;
+                    else
+                        counter++; }
+                PLTXTarr[i] = (char)((int)OUT + counter); }
+            return new string(PLTXTarr);
         }
 
         public string Encrypt(string plainText, string key)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            char[] KEYarr = key.ToCharArray();
+            char[] PLTXTarr = plainText.ToCharArray();
+            char[] CIPHERTXTarr = new char[plainText.Length];
+            char VAR = '0';
+            int INDX;
+            for (int i = 0; i < PLTXTarr.Length; i++) {
+                VAR = PLTXTarr[i];
+                INDX = (VAR - 97) % 26;
+                CIPHERTXTarr[i] = KEYarr[INDX]; }
+            return new string(CIPHERTXTarr);
         }
-
-
-
-
-
-
 
         /// <summary>
         /// Frequency Information:
@@ -66,10 +102,31 @@ namespace SecurityLibrary
 
         public string AnalyseUsingCharFrequency(string cipher)
         {
+            //throw new NotImplementedException();
+            string PLTXT = "";
+            string KEY = "etaoinsrhldcumfpgwybvkxjqz";
+            string CIPHERToLow = cipher.ToLower();
+            char[] KEYarr = KEY.ToCharArray();
+            char[] CIPHERTXTarr = CIPHERToLow.ToCharArray();
+            char[] MAParr = new char[26];
+            int[]  FREQarr = new int[26];
 
-            throw new NotImplementedException();
-
-
+            for (int i = 0; i < FREQarr.Length; i++) {
+                FREQarr[i] = 0; }
+            for (int i = 0; i < cipher.Length; i++) {
+                FREQarr[CIPHERTXTarr[i] - 97]++; }
+            for (int i = 0; i < FREQarr.Length; i++) {
+                int X = 0;
+                int P = 0;
+                for (int j = 0; j < FREQarr.Length; j++) {
+                    if (X < FREQarr[j]){
+                        X = FREQarr[j];
+                        P = j; } }
+                FREQarr[P] = 0;
+                MAParr[P] = KEY[i]; }
+            for (int i = 0; i < cipher.Length; i++) {
+                PLTXT += MAParr[CIPHERTXTarr[i] - 97]; }
+            return PLTXT;
         }
     }
 }

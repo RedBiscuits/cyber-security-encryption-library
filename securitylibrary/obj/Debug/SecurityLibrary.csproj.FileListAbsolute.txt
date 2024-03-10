@@ -46,9 +46,8 @@ C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\D
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\GIGABYTE\Downloads\MS_5-20230818T202552Z-001\MS_5\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
-C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
-C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\bin\Debug\SecurityLibrary.dll
-C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\bin\Debug\SecurityLibrary.pdb

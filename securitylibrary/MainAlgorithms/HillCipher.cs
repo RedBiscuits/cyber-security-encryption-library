@@ -6,40 +6,56 @@ using System.Threading.Tasks;
 
 namespace SecurityLibrary
 {
-
+    // el ciphoooooooooor 
+    // by elkamoooooooor
     public class HillCipher : ICryptographicTechnique<string, string>, ICryptographicTechnique<List<int>, List<int>>
     {
-        private int AlphabetSize = 26;
+        // 7agm el dataset
+        private int tolo = 26;
 
 
+        // function el encrypt el tarsh
         public List<int> Encrypt(List<int> PT, List<int> key)
         {
-            int matrixSize = (int)Math.Sqrt(key.Count);
-            List<int> CT = new List<int>();
+        
+            // el return
+            List<int> CT = new List<int>()
+     ;
 
-            for (int i = 0; i < PT.Count; i += matrixSize)
+            // el 3ard
+            int ms = (int)Math.Sqrt(key.Count)
+                ;
+ 
+
+            for (int i = 0; i < PT.Count; i += ms)
             {
-                List<int> block = PT.Skip(i).Take(matrixSize).ToList();
-                block.AddRange(Enumerable.Repeat(0, matrixSize - block.Count));
+                List<int> block = PT.Skip(i).Take(ms).ToList()
+                    ;
+                block.AddRange(Enumerable.Repeat(0, ms - block.Count))
+                    ;
 
-                for (int j = 0; j < matrixSize; j++)
+                for (int j = 0; j < ms; j++)
                 {
-                    int sum = key.Skip(j * matrixSize)
-                                 .Take(matrixSize)
+                    int sum = key.Skip(j * ms)
+                                 .Take(ms)
                                  .Zip(block, (x, y) => x * y)
-                                 .Sum();
-                    CT.Add(sum % AlphabetSize);
+                                 .Sum()
+                                 ;
+                    CT.Add(sum % tolo)
+                        ;
                 }
             }
 
-            return CT;
+            return CT
+                ;
         }
 
 
         public int find_pp(int det)
         {
-            return Enumerable.Range(1, AlphabetSize - 1)
-                             .FirstOrDefault(i => i * det % AlphabetSize == 1);
+            return Enumerable.Range(1, tolo - 1)
+                             .FirstOrDefault(i => i * det % tolo == 1)
+                             ;
         }
 
 
@@ -62,9 +78,9 @@ namespace SecurityLibrary
                 return det
                     ;
 
-            det %= AlphabetSize;
+            det %= tolo;
             while (det < 0)
-                det += AlphabetSize
+                det += tolo
                     ;
 
             return det
@@ -74,14 +90,14 @@ namespace SecurityLibrary
         public int find_modulolullullulululu(int val)
         {
             return Enumerable.Range(0, int.MaxValue)
-                             .Select(i => val + i * AlphabetSize)
-                             .First(x => x >= 0) % AlphabetSize;
+                             .Select(i => val + i * tolo)
+                             .First(x => x >= 0) % tolo;
         }
 
         public bool c_determ(int det)
         {
 
-            int a = AlphabetSize
+            int a = tolo
                 ;
 
             int b = det
@@ -160,10 +176,10 @@ namespace SecurityLibrary
                     for (int j = 0; j < m; j++)
                     {
                         List<int> L = key.Where((x, k) => k != i * m + j && k / m != i && k % m != j).ToList();
-                        list[i * m + j] = (b * (int)Math.Pow(-1, i + j) * find_determ(L, true)) % AlphabetSize;
+                        list[i * m + j] = (b * (int)Math.Pow(-1, i + j) * find_determ(L, true)) % tolo;
                         while (list[i * m + j] < 0)
                         {
-                            list[i * m + j] += AlphabetSize;
+                            list[i * m + j] += tolo;
                         }
                     }
                 }
@@ -196,10 +212,10 @@ namespace SecurityLibrary
             {
                 count += 4/2;
                 var result =
-                    from j in Enumerable.Range(0, AlphabetSize)
-                    from k in Enumerable.Range(0, AlphabetSize)
-                    where ((j * PT[6-6]) + (k * PT[5-4])) % AlphabetSize == CT[i]
-                       && ((j * PT[8/4]) + (k * PT[2+1])) % AlphabetSize == CT[i + 4/2]
+                    from j in Enumerable.Range(0, tolo)
+                    from k in Enumerable.Range(0, tolo)
+                    where ((j * PT[6-6]) + (k * PT[5-4])) % tolo == CT[i]
+                       && ((j * PT[8/4]) + (k * PT[2+1])) % tolo == CT[i + 4/2]
                     select new { j, k }
                     ;
 
@@ -239,10 +255,10 @@ namespace SecurityLibrary
                     ;
 
                 var result =
-                    from j in Enumerable.Range(0, AlphabetSize)
-                    from k in Enumerable.Range(0, AlphabetSize)
-                    from a in Enumerable.Range(0, AlphabetSize)
-                    where Enumerable.Range(0, 3).All(idx => ((j * PT[idx * 3]) + (k * PT[idx * 3 + 1]) + (a * PT[idx * 3 + 2])) % AlphabetSize == CT[i + idx * 3])
+                    from j in Enumerable.Range(0, tolo)
+                    from k in Enumerable.Range(0, tolo)
+                    from a in Enumerable.Range(0, tolo)
+                    where Enumerable.Range(0, 3).All(idx => ((j * PT[idx * 3]) + (k * PT[idx * 3 + 1]) + (a * PT[idx * 3 + 2])) % tolo == CT[i + idx * 3])
                     select new[] { j, k, a }
                     ;
 

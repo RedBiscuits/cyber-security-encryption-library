@@ -51,3 +51,9 @@ C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrar
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\bin\Debug\SecurityLibrary.dll
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\bin\Debug\SecurityLibrary.pdb
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.dll
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.pdb

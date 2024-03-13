@@ -79,3 +79,12 @@ C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackag
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CopyComplete
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
 C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityPackageTest.dll
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityPackageTest.pdb
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityLibrary.dll
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\bin\Debug\SecurityLibrary.pdb
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.AssemblyReference.cache
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.csproj.CoreCompileInputs.cache
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\Security.174D7A11.Up2Date
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.dll
+C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityPackageTest\obj\Debug\SecurityPackageTest.pdb

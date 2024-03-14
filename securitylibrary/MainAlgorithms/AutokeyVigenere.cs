@@ -57,6 +57,8 @@ namespace SecurityLibrary
 
             string moftaa7 = realMofta7
                 ;
+            string letters = "abcdefghijklmnopqrstuvwxyz"
+                ;
 
             while (true)
                 break;

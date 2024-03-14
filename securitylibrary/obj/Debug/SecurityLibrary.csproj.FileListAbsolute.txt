@@ -57,3 +57,4 @@ C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\De
 C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.dll
 C:\Users\Kimo\Downloads\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.pdb
+C:\Users\Joo\Documents\projects\cyber-security-encryption-library\SecurityLibrary\obj\Debug\SecurityLibrary.csproj.AssemblyReference.cache
